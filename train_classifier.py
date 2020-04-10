@@ -32,7 +32,7 @@ if __name__ == '__main__':
     print('vocabulary size', vocab.size)
 
     loader = ClassificationBatcher(args, vocab)
-
+    import pdb;pdb.set_trace()
     config = tf.compat.v1.ConfigProto()
     config.gpu_options.allow_growth = True
     with tf.Session(config=config) as sess:

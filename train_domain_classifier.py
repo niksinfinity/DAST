@@ -64,7 +64,7 @@ if __name__ == '__main__':
     loader = create_domain_classifier_batches(loader)
     print("transfer dataset successfully!")
 
-    config = tf.compat.v1.ConfigProto()
+    config = tf.ConfigProto()()
     config.gpu_options.allow_growth = True
     with tf.Session(config=config) as sess:
 

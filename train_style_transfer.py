@@ -125,7 +125,7 @@ if __name__ == '__main__':
         if not os.path.exists(output_online_path):
             os.mkdir(output_online_path)
 
-    config = tf.compat.v1.ConfigProto()
+    config = tf.ConfigProto()()
     config.gpu_options.allow_growth = True
     with tf.Session(config=config) as sess:
         # create style transfer model

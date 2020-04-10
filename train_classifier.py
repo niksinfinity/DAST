@@ -33,7 +33,7 @@ if __name__ == '__main__':
 
     loader = ClassificationBatcher(args, vocab)
 
-    config = tf.ConfigProto()
+    config = tf.compat.v1.ConfigProto()
     config.gpu_options.allow_growth = True
     with tf.Session(config=config) as sess:
 

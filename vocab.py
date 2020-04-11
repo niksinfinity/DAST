@@ -6,7 +6,6 @@ from collections import Counter
 import codecs
 import glob
 import json
-import ipdb
 
 import numpy as np
 from numpy import linalg as LA
@@ -45,7 +44,6 @@ def build_vocab(data_path, save_path, min_occur=1):
                 if not string_: break
                 dict_example = json.loads(string_)
                 sent = dict_example["review"]
-                # ipdb.set_trace()
                 words += sent.split()
 
     cnt = Counter(words)
@@ -73,7 +71,6 @@ def build_vocab(data_path, save_path, min_occur=1):
 #                     if not string_: break
 #                     dict_example = json.loads(string_)
 #                     sent = dict_example["review"]
-#                     # ipdb.set_trace()
 #                     words += sent.split()
 
 #     cnt = Counter(words)
@@ -101,7 +98,6 @@ def build_unify_vocab(datapaths, save_path, min_occur=2):
                     if not string_: break
                     dict_example = json.loads(string_)
                     sent = dict_example["review"]
-                    # ipdb.set_trace()
                     words += sent.split()
                     if 'target' in data_path:
                         for word in sent.split():

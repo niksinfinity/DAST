@@ -3,6 +3,7 @@ import random
 import logging
 
 import tensorflow as tf
+tf.logging.set_verbosity(tf.logging.ERROR)
 import numpy as np
 
 from dataloader.style_dataloader import Example

@@ -5,13 +5,12 @@ import random
 
 import numpy as np
 import tensorflow as tf
+tf.logging.set_verbosity(tf.logging.ERROR)
 
 import network
 from config import load_arguments
 from vocab import *
 from dataloader.multi_style_dataloader import MultiStyleDataloader
-
-import ipdb
 
 def create_model(sess, args, vocab):
     model = eval('network.classifier.CNN_Model')(args, vocab)

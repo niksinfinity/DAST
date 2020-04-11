@@ -6,6 +6,7 @@ import random
 import numpy as np
 import tensorflow as tf
 
+tf.logging.set_verbosity(tf.logging.ERROR)
 import network
 from config import load_arguments
 from vocab import Vocabulary, build_vocab

@@ -4,6 +4,7 @@ import argparse
 
 import glob
 import tensorflow as tf
+tf.logging.set_verbosity(tf.logging.ERROR)
 from nltk.translate.bleu_score import corpus_bleu, sentence_bleu, SmoothingFunction
 
 smoothie = SmoothingFunction().method1

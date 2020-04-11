@@ -1,5 +1,5 @@
 import tensorflow as tf
-
+tf.logging.set_verbosity(tf.logging.ERROR)
 from network.nn import *
 from network.ControlGen import Model as BaseModel
 

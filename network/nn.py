@@ -1,6 +1,6 @@
 import tensorflow as tf
 import numpy as np
-
+tf.logging.set_verbosity(tf.logging.ERROR)
 def leaky_relu(x, alpha=0.01):
     return tf.maximum(alpha * x, x)
 

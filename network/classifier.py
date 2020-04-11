@@ -1,5 +1,6 @@
 import os
 import tensorflow as tf
+tf.logging.set_verbosity(tf.logging.ERROR)
 
 class CNN_Model(object):
 
